@@ -1,0 +1,88 @@
+{
+   "notify": {
+      "command": "notify-send \"{}\""
+   },
+   "sensors": {
+      "main_path": "/sys/class/thermal/",
+      "regex_folder": "thermal*",
+      "sensors_type": [
+         "x86_pkg_temp"
+      ],
+      "min": 0,
+      "max": 120
+   },
+   "i8kfan": "i8kfan",
+   "timeout": 1000,
+   "ranges": {
+      "AC": [
+         {
+            "min": -1,
+            "max": 50,
+            "left": 0,
+            "right": 0
+         },
+         {
+            "min": 45,
+            "max": 55,
+            "left": 1,
+            "right": 0
+         },
+         {
+            "min": 45,
+            "max": 65,
+            "left": 1,
+            "right": 1
+         },
+
+         {
+            "min": 55,
+            "max": 128,
+            "left": 2,
+            "right": 2
+         }
+      ],
+      "CHARGING": [
+         {
+            "min": -1,
+            "max": 45,
+            "left": 0,
+            "right": 0
+         },
+         {
+            "min": 40,
+            "max": 65,
+            "left": 1,
+            "right": 1
+         },
+
+         {
+            "min": 55,
+            "max": 128,
+            "left": 2,
+            "right": 2
+         }
+      ],
+      "BATT": [
+         {
+            "min": -1,
+            "max": 65,
+            "left": 0,
+            "right": 0
+         },
+         {
+            "min": 50,
+            "max": 75,
+            "left": 1,
+            "right": 1
+         },
+         {
+            "min": 60,
+            "max": 128,
+            "left": 2,
+            "right": 2
+         }
+      ]
+   }
+}
+
+
